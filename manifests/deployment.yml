@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: uppercasetechaksdeploy 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: uppercasetechaksdeploy 
+    spec:
+      containers:
+        - name: uppercasetechaksdeploy 
+          image: aksacrdeploy.azurecr.io/uppercasetechaksdeploy
+          ports:
+          - containerPort: 80
